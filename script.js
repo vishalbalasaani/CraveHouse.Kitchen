@@ -135,6 +135,13 @@ function applyConfigurations() {
         contactWhatsapp.textContent = `+${CRAVE_HOUSE_CONFIG.whatsappNumber.slice(0,2)} ${CRAVE_HOUSE_CONFIG.whatsappNumber.slice(2,7)} ${CRAVE_HOUSE_CONFIG.whatsappNumber.slice(7)}`;
     }
 
+    // Also bind the contact icon box for WhatsApp
+    const contactWhatsappIcon = document.getElementById("contact-whatsapp-icon");
+    if (contactWhatsappIcon) {
+        const waText = encodeURIComponent("Hi Crave House 👋 I'd like to get in touch!");
+        contactWhatsappIcon.href = `https://wa.me/${CRAVE_HOUSE_CONFIG.whatsappNumber}?text=${waText}`;
+    }
+
     const whatsappFooterElements = ["footer-social-whatsapp", "footer-whatsapp-link"];
     whatsappFooterElements.forEach(id => {
         const el = document.getElementById(id);
@@ -155,7 +162,7 @@ function applyConfigurations() {
     });
 
     // 4. Bind Instagram & Email
-    const instagramElements = ["instagram-cta-btn", "contact-instagram-text", "footer-social-instagram", "footer-ordering-instagram"];
+    const instagramElements = ["instagram-cta-btn", "contact-instagram-text", "contact-instagram-icon", "footer-social-instagram", "footer-ordering-instagram"];
     instagramElements.forEach(id => {
         const el = document.getElementById(id);
         if (el) {
@@ -175,7 +182,7 @@ function applyConfigurations() {
         }
     });
 
-    const emailElements = ["contact-email-text", "footer-social-email"];
+    const emailElements = ["contact-email-text", "contact-email-icon", "footer-social-email"];
     emailElements.forEach(id => {
         const el = document.getElementById(id);
         if (el) {
