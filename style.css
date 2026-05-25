@@ -1,4 +1,4 @@
-﻿/*
+/*
 ================================================================
 CRAVE HOUSE - PREMIUM DESIGN SYSTEM
 ================================================================
@@ -1348,6 +1348,21 @@ section {
     justify-content: center;
     color: var(--accent);
     flex-shrink: 0;
+    transition: var(--transition-medium);
+    text-decoration: none;
+}
+
+/* Clickable icon anchors get pointer + hover glow */
+a.contact-info-icon {
+    cursor: pointer;
+}
+
+a.contact-info-icon:hover {
+    background: rgba(255, 94, 20, 0.18);
+    border-color: var(--accent);
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 94, 20, 0.3);
+    color: #FFFFFF;
 }
 
 .contact-info-icon svg {
